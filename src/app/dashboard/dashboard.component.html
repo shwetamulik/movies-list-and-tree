@@ -1,0 +1,15 @@
+<div class="dashboard">
+    <h1>Movies</h1>
+   <span> <button (click)="navigateToTree()" class="tree">Go to Tree Component</button></span>
+</div>
+<label>Search movies:
+    <input [(ngModel)]="searchTerm" (input)="searchMovies()" />
+</label>
+<div class="container">
+    <ul class="movie-list">
+        <li *ngFor="let film of movies.results" class="movie">
+            <img [src]="thumbnail + film.poster_path" alt="{{ film.title }} Poster">
+            <div class="movie-title">{{ film.title | titlecase }}</div>
+        </li>
+    </ul>
+</div>

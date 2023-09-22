@@ -1,0 +1,78 @@
+
+.tree-container {
+    font-family: Arial, sans-serif;
+    width: 500px;
+  }
+  
+  /* Style for the input and buttons */
+  .tree-input {
+    padding: 5px;
+    margin: 10px;
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .update {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 3px;
+    margin: 10px;
+  }
+  .delete{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 3px;
+    margin: 10px;
+  }
+  /* Style for the tree list */
+  .tree-list ul {
+    // list-style: none;
+    padding-left: 0;
+  }
+  
+  /* Style for tree nodes */
+  .tree-list li {
+    margin-bottom: 5px;
+  }
+  
+  /* Style for node headers */
+  .node-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .node-name {
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style for edit input fields */
+  .edit-input {
+    width: 150px;
+    display: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px;
+  }
+  
+  /* Style for nested tree lists */
+  .tree-list ul ul {
+    margin-left: 20px;
+  }
+  
+  /* Hover effect for buttons */
+  .buttons:hover {
+    background-color: #45a049;
+  }
+  

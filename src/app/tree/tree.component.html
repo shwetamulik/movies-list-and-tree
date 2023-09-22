@@ -1,0 +1,34 @@
+
+<div  class="tree-container">
+<div >
+    <input [(ngModel)]="newNodeName" placeholder="New Node Name" class="tree-input"/>
+    <button (click)="addNode()">Add Node</button>
+  </div>
+  
+  <div class="tree-list">
+    <ul>
+      <li *ngFor="let node of treeData">
+       <span (click)="selectNode(node)"><b>{{ node.name }}</b> </span>
+        <input [(ngModel)]="node.name" *ngIf="node === selectedNode" class="tree-input"/>
+        <button (click)="updateNode(node)" class="update">Update</button>
+        <button (click)="deleteNode(node.id)"  class="delete">Delete</button>
+        <ul *ngIf="node.children && node.children.length > 0">
+          <li *ngFor="let child of node.children">
+            <span (click)="selectNode(child)">{{ child.name }}</span>
+            <input [(ngModel)]="child.name" *ngIf="child === selectedNode" />
+            <button (click)="updateNode(child)"  class="update">Update</button>
+            <button (click)="deleteNode(child.id)" class="delete">Delete</button>
+            <ul *ngIf="child.children && child.children.length > 0">
+              <li *ngFor="let subchild of child.children">
+                <span (click)="selectNode(subchild)">{{ subchild.name }}</span>
+                <input [(ngModel)]="subchild.name" *ngIf="subchild === selectedNode" class="tree-input" />
+                <button (click)="updateNode(subchild)">Update</button>
+                <button (click)="deleteNode(subchild.id)">Delete</button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
